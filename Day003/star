@@ -1,0 +1,108 @@
+using System;
+
+namespace StarApp002
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int i;
+            for (i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < i + 1; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine();
+
+            for ( i = 0; i < 5; i++)
+            {
+                for (int j = 5; j > i; j--)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine();
+
+            for ( i = 0; i < 5; i++)
+            {
+                for (int k = 4; k > i; k--)
+                {
+                    Console.Write(" ");
+                }
+                for (int j = 0; j < i + 1; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine();
+
+            for ( i = 0; i < 5; i++)
+            {
+                for (int k = 0; k < i; k++)
+                {
+                    Console.Write(" ");
+                }
+                for (int j = 5; j > i; j--)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine();
+
+            int num = 1;
+            for (i = 0; i < 3; i++)
+            {
+                for (int k = 2; k > i; k--)
+                {
+                    Console.Write(" ");
+                }
+                for (int j = 0; j < num; j++)
+                {
+                    Console.Write("*");
+                }
+                num = num + 2;
+                Console.WriteLine();
+            }
+            for (i = 3; i < 4; i++)
+            {
+                for (int k = 0; k < i - 2; k++)
+                {
+                    Console.Write(" ");
+                }
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write("*");
+                }
+                num = num + 2;
+                Console.WriteLine();
+                for (i = 4; i < 5; i++)
+                {
+                    for (int k = 0; k < i - 2; k++)
+                    {
+                        Console.Write(" ");
+                    }
+                    for (int j = 0; j < i-3; j++)
+                    {
+                        Console.Write("*");
+                    }
+                    num = num + 2;
+                    Console.WriteLine();
+                }
+            }
+        }
+    }
+}
+
+
+
+

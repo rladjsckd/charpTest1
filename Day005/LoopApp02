@@ -1,0 +1,52 @@
+using System;
+
+namespace LoopApp002
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //int i = 0;
+            //while (i < 5) 
+            //{
+            //Console.WriteLine(++i); // ++i = 1 2 3 4 5(전치 연산자), i++ = 0 1 2 3 4(후치 연산자) //전치 연산자는 먼저 실행후 결과 값을 보냄. 후치 연산자는 보낸후에 실행함
+            //Console.WriteLine("i : " + i); // 1줄 아래는 무조건 +1
+            //}
+
+            //int i = 0;
+            //do
+            //{
+            //    Console.WriteLine(i);
+            //    i++;
+            //} while (i < 5);
+            Console.WriteLine("숫자를 입력해주세요");
+
+            int i;
+
+            do
+            {
+                i = int.Parse(Console.ReadLine());
+
+
+                switch (i)
+                {
+                    case 1:
+                        Console.WriteLine("1을 입력하였습니다.");
+                        break;
+                    case 2:
+                        Console.WriteLine("2를 입력하였습니다.");
+                        break;
+                    default:
+                        Console.WriteLine("1 , 2이외에 값을 입력하였습니다.");
+                        break;
+                }
+                if (i == 100)
+                {
+                    Console.WriteLine("100을 입력하였으니 종료합니다.");
+                    break;
+                }
+
+            } while (true);
+        }
+    }
+}

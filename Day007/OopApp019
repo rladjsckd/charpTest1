@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OopApp019
+{
+    abstract class Shape 
+    {
+        public abstract void Draw();
+    }
+    class Triangle : Shape 
+    {
+        public override void Draw()
+        {
+            throw new NotImplementedException();
+        }
+    }
+    class Rectangle : Shape 
+    {
+        public override void Draw()
+        {
+            throw new NotImplementedException();
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Shape s = new Shape();
+            Triangle t = new Triangle();
+            Rectangle r = new Rectangle();
+
+        }
+    }
+}

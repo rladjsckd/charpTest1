@@ -1,0 +1,37 @@
+using System;
+
+namespace InterfaceApp001
+{
+    interface Wing
+    {
+        void Fly();
+    }
+    class Horse
+    {
+
+    }
+    class Angel : Wing
+    {
+        public void Fly()
+        {
+            Console.WriteLine("천사가 납니다.");
+        }
+    }
+    class Unicon : Horse, Wing
+    {
+        public void Fly()
+        {
+            Console.WriteLine("유니콘이 납니다.");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Angel angle = new Angel();
+            angle.Fly();
+            Unicon unicon = new Unicon();
+            unicon.Fly();
+        }
+    }
+}

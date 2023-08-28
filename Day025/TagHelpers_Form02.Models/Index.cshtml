@@ -1,0 +1,130 @@
+@model TagHelpers_Form02.Models.Student
+@{
+    ViewData["Title"] = "Home Page";
+}
+<head>
+    <style>
+        .form-check-label {
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<div class="text-center">
+    <h1 class="display-4">만족도 조사</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <form method="get" action="./"></form>
+            <form>
+                <label asp-for="Name">이름:</label>
+                <input asp-for="Name"
+                   placeholder="이름을 입력하세요."
+                   class="form-control" />
+                <br />
+                <label asp-for="Gender">성별:</label>
+                 <select asp-for="Gender"
+                     class="form-control"
+                    asp-items="Html.GetEnumSelectList<Gender>()">
+                <option value="">성별을 선택해 주세요.</option>
+                </select>
+                <br />
+                <label asp-for="Hp">전화번호:</label>
+                <input asp-for="Hp"
+                       placeholder="전화번호를 입력하세요."
+                       class="form-control" />
+                <br />
+                <label>전역여부</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="Discharge" value="전역">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        군필
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="Discharge" value="전역">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        미필
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="Discharge" value="관계없음">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        관계없음
+                    </label>
+                </div>
+                <br />
+                <label asp-for="Graduation">학력:</label>
+                <select asp-for="Graduation"
+                        class="form-control"
+                        asp-items="Html.GetEnumSelectList<Graduation>()">
+                    <option value="">학력을 선택해 주세요.</option>
+                </select>
+                <br />
+                <label asp-for="Major">전공:</label>
+                <input asp-for="Major"
+                       placeholder="전공을 입력하세요."
+                       class="form-control" />
+                <br />
+                <label>만족도label>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-check">
+                                <input class="form-check-input" type="radio" asp-for="Satisfaction" value="매우만족">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                매우만족
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-check">
+                                <input class="form-check-input" type="radio" asp-for="Satisfaction" value="만족">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                만족
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-check">
+                                <input class="form-check-input" type="radio" asp-for="Satisfaction" value="보통">
+                            <label class="form-check-label" for="flexRadioDefault3">
+                                보통
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                         <div class="form-check">
+                                <input class="form-check-input" type="radio" asp-for="Satisfaction" value="불만족">
+                             <label class="form-check-label" for="flexRadioDefault4">
+                                    불만족
+                             </label>
+                         </div>
+                     </div>
+                    <div class="col">
+                         <div class="form-check">
+                                 <input class="form-check-input" type="radio" asp-for="Satisfaction" value="매우불만족">
+                                <label class="form-check-label" for="flexRadioDefault4">
+                                    매우불만족
+                                </label>
+                         </div>
+                    </div>
+                </div>
+                    <br />
+                <label asp-for="Description">건의사항:</label>
+                <textarea asp-for="Description"
+                      rows="5"
+                      cols="60"
+                      placeholder="건의사항이 있다면 적어주세요."
+                      class="form-control">
+                </textarea>
+                <br />
+                <input type="submit" value="제출"
+                   class="btn btn-outline-primary" />
+            </form>
+        </div>
+        <div class="col-sm-4">
+            <img src="~/images/kk002.png" alt="ANU" width="400" height="800">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+@model MVC_203_08_30QUIZ.Models.Diary
+@{
+    ViewData["Title"] = "Diary";
+}
+
+<style>
+    .input-label {
+        display: inline-block;
+        width: 40px;
+    }
+
+    .input-field {
+        display: inline-block;
+        width: 180px;
+    }
+</style>
+<form asp-action="SaveDiary" method="post">
+    <div class="text-center">
+        <h1 class="display-4">Diary</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="form-group center-container">
+                    <div>
+                        <label class="input-label">번호:</label>
+                        <input asp-for="No" class="input-field form-control" />
+                        <label class="input-label">제목:</label>
+                        <input asp-for="Title" class="input-field form-control" />
+                        <label class="input-label">날짜:</label>
+                        <input asp-for="Date" class="input-field form-control" />
+                        <button type="submit" class="btn btn-primary">저장</button>
+                    </div>
+                    <div>
+                        <label class="input-label">내용:</label>
+                        <textarea asp-for="Content" class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,33 @@
+@model IEnumerable<MVC_203_08_30QUIZ.Models.Diary>
+@{
+    ViewData["Title"] = "Result";
+}
+<h1>목록</h1>
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.No</td>
+                    <td>@item.Title</td>
+                    <td>@item.Date</td>
+                    <td>@item.Content</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No diary entries available.</p>
+}
